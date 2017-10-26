@@ -1,0 +1,15 @@
+.App {
+	text-align: center;
+}
+
+.App::after {
+	clear: both;
+}
+
+.nav_bar {
+}
+
+.conent {
+	margin-left: 300px;
+	padding: 30px;
+}

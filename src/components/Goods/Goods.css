@@ -1,0 +1,36 @@
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.goods-item {
+    margin: 5px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.goods-item:hover {
+    background: #ddd;
+}
+
+.goods-item span {
+    width: 30%;
+    text-align: left;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

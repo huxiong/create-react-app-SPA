@@ -1,0 +1,30 @@
+.nav {
+    margin: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav a {
+    text-decoration: none;
+    width: 33%;
+}
+
+.nav li {
+    border-left: 5px solid sandybrown;
+    margin: 15px 10px;
+    padding: 6px 0;
+    color: #333;
+    list-style: none;
+    background: #bbb;
+    cursor: pointer;
+}
+
+.nav li:hover {
+    background: #b0b0b0;
+}
+
+.active li {
+    background: #969696 !important;
+}
