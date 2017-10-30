@@ -16,6 +16,7 @@ npm start
 ```
 npm i react-router-dom --save
 ```
+create-react-app 会存在丢包的现象，此时npm install一下就行了
 
 ---
 ### 目录

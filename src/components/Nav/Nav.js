@@ -3,6 +3,8 @@ import "./Nav.css";
 import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
 
+// import WrapComponent from "./../WrapWithLoadData/WrapWithLoadData";
+
 class ListItem extends Component {
     static propTypes = {
         item: PropTypes.shape({
@@ -22,13 +24,37 @@ class ListItem extends Component {
 
 class Nav extends Component { 
     static propTypes = {
-        list: PropTypes.array
+        data: PropTypes.array
     };
     static defaultProps = {
-        list: []
+        data: []
+    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            list: []
+        };
+    };
+    componentDidMount() {
+        this.getList("./_mock_/nav.json");
+    };
+    getList(url) {
+        fetch(url)
+        .then((res) => {
+            return res.json();
+        })
+        .then((list) => {
+            this.setState({
+                list
+            });
+        })
+        .catch((error) => {
+            console.log("get list error",error);
+        });
     };
     render() {
-        const list = this.props.list;
+        const list = this.state.list;
+        // const list = this.props.data;
         return (
             <ul className="nav">
                 {
@@ -45,3 +71,4 @@ class Nav extends Component {
 
 
 export default Nav;
+// export default WrapComponent(Nav,"./_mock_/nav.json");

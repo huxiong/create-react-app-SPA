@@ -11,16 +11,6 @@ import {
   Route
 } from "react-router-dom";
 
-const navList = [{
-  text: "welcome",
-  url: "/welcome"
-}, {
-  text: "goods",
-  url: "/goods"
-}, {
-  text: "product",
-  url: "/product"
-}];
 
 class App extends Component {
   render() {
@@ -28,7 +18,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="nav_bar">
-            <Nav list={navList}></Nav>
+            <Nav></Nav>
           </div>
           <div className="content">
             <Route path="/welcome" component={Welcome}></Route>
